@@ -1,54 +1,54 @@
-# 📊 TikTok Sentiment Analyzer
+# TikTok Sentiment Analyzer
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white) 
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.30-FF4B4B?style=flat-square&logo=streamlit&logoColor=white) 
 ![Apify](https://img.shields.io/badge/Apify-Scraper-96E072?style=flat-square&logo=apify&logoColor=black)
 ![Status](https://img.shields.io/badge/Status-Active-22c55e?style=flat-square)
 
-Aplikasi desktop lokal untuk **Analisis Sentimen Komentar TikTok** secara real-time. Aplikasi ini memudahkan Anda mengambil data komentar dari video TikTok, menganalisis sentimennya (Positif/Negatif/Netral), dan memvisualisasikan hasilnya dalam bentuk grafik menarik.
+A local desktop application for **real-time TikTok Comment Sentiment Analysis**. This tool facilitates data extraction from TikTok videos, performs sentiment analysis (Positive/Negative/Neutral) using a lexicon-based approach optimized for Indonesian language, and visualizes the results through interactive dashboards.
 
 ---
 
-## 📸 Preview Aplikasi
+## Application Preview
 
 ![Dashboard UI](assets/app_screenshot.png)
 
-*Dashboard interaktif dengan tema TikTok Red, chart distribusi sentimen, dan word cloud.*
+*Interactive dashboard featuring sentiment distribution charts, word clouds, and detailed data tables.*
 
 ---
 
-## ✨ Fitur Utama
+## Key Features
 
-- **🕷️ Real-time Scraping**: Terintegrasi dengan **Apify** untuk mengambil ratusan komentar hanya dalam hitungan detik.
-- **🧠 Analisis Sentimen Indonesia**: Menggunakan metode **Lexicon-based** yang dioptimalkan untuk Bahasa Indonesia, termasuk handling slang (e.g., "gacor", "zonk", "worth it").
-- **📊 Visualisasi Data**:
-  - **Pie Chart**: Persentase sentimen.
-  - **Word Cloud**: Tren kata yang sering muncul.
-  - **Histogram**: Distribusi skor sentimen.
-- **💾 Database Lokal**: Semua hasil analisis tersimpan otomatis di **SQLite**, bisa diakses kembali kapan saja via menu *History*.
-- **🖥️ UI Simpel & Elegan**: Antarmuka bersih tanpa konfigurasi rumit.
+- **Real-time Scraping**: Integrated with **Apify** to extract hundreds of comments efficiently.
+- **Indonesian Sentiment Analysis**: Utilizes a **Lexicon-based** method optimized for Indonesian slang and context (e.g., handling terms like "gacor", "zonk", "worth it").
+- **Data Visualization**:
+  - **Pie Chart**: Sentiment percentage distribution.
+  - **Word Cloud**: Visual representation of frequently used words.
+  - **Histogram**: Sentiment score distribution.
+- **Local Database**: All analysis results are automatically stored in **SQLite** for historical tracking.
+- **Streamlined UI**: Clean, professional interface designed for ease of use without complex attributes.
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## Technology Stack
 
-| Komponen | Teknologi | Deskripsi |
+| Component | Technology | Description |
 | --- | --- | --- |
-| **Framework** | **Streamlit** | Frontend web interaktif berbasis Python |
-| **Scraper** | **Apify Client** | Mengambil data komentar TikTok secara reliable |
-| **Database** | **SQLite** | Penyimpanan data lokal ringan (tanpa server) |
-| **Visualization** | **Matplotlib** | Membuat grafik statis dan statistik |
-| **Processing** | **Pandas** | Manipulasi dan cleaning data |
+| **Framework** | **Streamlit** | Python-based interactive web framework |
+| **Scraper** | **Apify Client** | Reliable TikTok data extraction |
+| **Database** | **SQLite** | Serverless, self-contained SQL database engine |
+| **Visualization** | **Matplotlib** | Static, animated, and interactive visualizations |
+| **Processing** | **Pandas** | Data manipulation and analysis library |
 
 ---
 
-## 🚀 Cara Instalasi
+## Installation Guide
 
-### Prasyarat
-1. Pastikan terinstall **Python 3.10+**.
-2. Memiliki akun **[Apify](https://apify.com/)** (Gratis) untuk mendapatkan API Token.
+### Prerequisites
+1. **Python 3.10+** installed.
+2. **[Apify](https://apify.com/)** account for API Token access.
 
-### Langkah-langkah
+### Steps
 1. **Clone Repository**
    ```bash
    git clone https://github.com/delfika12/TikTok-Sentiment-Analyzer.git
@@ -60,54 +60,54 @@ Aplikasi desktop lokal untuk **Analisis Sentimen Komentar TikTok** secara real-t
    pip install -r requirements.txt
    ```
 
-3. **Jalankan Aplikasi**
+3. **Run Application**
    ```bash
    streamlit run app.py
    ```
 
 ---
 
-## 📖 Cara Penggunaan
+## Usage Instructions
 
-1. **Setup Token Apify** (Hanya sekali):
-   - Buka menu **⚙️ Settings** di sidebar kiri.
-   - Masukkan **Apify API Token** Anda.
-2. **Mulai Analisis**:
-   - Buka menu **🔍 Analisis**.
-   - Masukkan **Nama Topik** (misal: "Review iPhone 15").
-   - Paste **Link Video TikTok**.
-   - Klik **🚀 Start Scraping & Analyze**.
-3. **Lihat Hasil**:
-   - Tunggu proses selesai.
-   - Dashboard akan menampilkan grafik sentimen dan tabel komentar.
+1. **Configure Apify Token** (First time only):
+   - Navigate to **Settings** in the sidebar.
+   - Enter your **Apify API Token**.
+2. **Start Analysis**:
+   - Go to **Analisis Baru** menu.
+   - Enter **Topic Name**.
+   - Input **TikTok Video URL**.
+   - Click **Start Scraping & Analyze**.
+3. **View Results**:
+   - Wait for the process to complete.
+   - The dashboard will present sentiment charts and comment tables.
 
 ---
 
-## 📂 Struktur Project
+## Project Structure
 
 ```
 TikTok-Sentiment-Analyzer/
-├── app.py                # Main Application (Streamlit)
-├── scraper.py            # Modul Integrasi Apify
-├── sentiment.py          # Modul Analisis Sentimen (Lexicon)
-├── database.py           # Operasi SQLite (CRUD)
-├── visualization.py      # Modul Grafik & WordCloud
-├── utils.py              # Text Preprocessing & Cleaning
+├── app.py                # Main Application Entry Point
+├── scraper.py            # Apify Integration Module
+├── sentiment.py          # Sentiment Analysis Logic
+├── database.py           # SQLite Database Operations
+├── visualization.py      # Charting & WordCloud Generation
+├── utils.py              # Text Preprocessing Utilities
 ├── assets/
-│   ├── lexicon_id.json   # Kamus Kata Sentimen Indonesia
+│   ├── lexicon_id.json   # Indonesian Sentiment Lexicon
 │   └── app_screenshot.png
 ├── data/
-│   └── sentiment.db      # File Database (Auto-generated)
-└── requirements.txt      # Daftar Library Python
+│   └── sentiment.db      # Local Database File
+└── requirements.txt      # Project Dependencies
 ```
 
 ---
 
-## 📝 Catatan/Disclaimer
-- Aplikasi ini membutuhkan koneksi internet untuk scraping via Apify.
-- Pastikan Anda memiliki kredit Apify (Free tier cukup untuk penggunaan wajar).
-- Lexicon sentimen dapat diedit/ditambahkan di `assets/lexicon_id.json`.
+## Disclaimer
+- This application requires an internet connection for scraping via Apify.
+- Ensure you have sufficient Apify credits (Free tier is usually sufficient for testing).
+- Sentiment lexicon can be customized in `assets/lexicon_id.json`.
 
 ---
 
-**Created with ❤️ by Delfika**
+**Author**: Delfika
